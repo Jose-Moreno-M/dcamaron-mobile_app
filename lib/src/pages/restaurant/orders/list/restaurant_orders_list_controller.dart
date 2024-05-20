@@ -6,7 +6,7 @@ class RestaurantOrdersListController extends GetxController{
 
   OrdersProvider ordersProvider = OrdersProvider();
 
-  List<String> status = <String>['HECHO','PAGADO', 'COCINANDO', 'LISTO', 'ENTREGADO'].obs;
+  List<String> status = <String>['PAGADO', 'COCINANDO', 'LISTO', 'ENTREGADO'].obs;
 
   Future<List<Order>> getOrders(String status) async {
     return await ordersProvider.findByStatus(status);
